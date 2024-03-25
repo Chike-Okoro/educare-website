@@ -1,0 +1,621 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #fff;
+    font-family: "Poppins", sans-serif;
+}
+
+.container{
+    width: 100%;
+}
+
+#main-header{
+    background-color: #F9E0AE;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 160px;
+    padding-right: 160px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#main-header h1{
+    font-family: cursive;
+}
+
+.imgCard {
+    display: flex;
+}
+
+.slide{
+    height: 100%;
+    width: 180px;
+    background-color: #F9E0AE;
+    transition: 0.5s ease;
+    transform: translateX(-180px);
+}
+
+.slide ul{
+    padding-top: 30px;
+}
+
+.slide ul li{
+    list-style: none;
+}
+
+.slide ul li a{
+    text-decoration: none;
+    transition: 0.2s ease-out;
+    color: #011a41;
+}
+
+.my-checkbox{
+    display: none;
+    visibility: hidden;
+}
+
+.toggle{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 2px;
+    background-color: #fff;
+    top: 20px;
+    padding: 10px, 0;
+    box-shadow: 0,0, 10px rgba(0, 0, 0, 0.3);
+}
+
+.toggle .common{
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    border-radius: 50px;
+    background-color: #696969;
+    transition: 0.3s ease;
+}
+
+.toggle .top-line{
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle .middle-line{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle .bottom-line{
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input:checked ~ .toggle .top-line{
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(45deg);
+}
+
+input:checked ~ .toggle .bottom-line{
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(-45deg);
+}
+
+input:checked ~ .toggle .middle-line{
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+input:checked ~ .slide{
+    transform: translateX(0);
+}
+
+#navbar li{
+    display: inline;
+    list-style-type: none;
+    align-items: center;
+    font-weight: bold;
+    padding-right: 15px;
+}
+
+#navbar ul{
+    padding: 0;
+    align-items: center;
+}
+
+#navbar a{
+    color: black;
+    text-decoration: none;
+}
+
+#navbar i{
+    width: 20px;
+}
+
+#contact-button{
+    background-color: #C24914;
+    color: #fff;
+    display: inline-block;
+    border: 1px #C24914 solid;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: medium;
+    padding: 10px;
+}
+
+#section-1{
+    display: flex;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-left: 80px;
+    margin-right: 80px;
+    height: 100vh;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+#section-1 h2{
+    font-size: 60px;
+}
+
+#section-1 p{
+    color: #696969;
+    font-size: 20px;
+}
+
+#section-1 button{
+    background-color: #682C0E;
+    border: 1px #682C0E solid;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 17px;
+    display: inline-block;
+    min-width: 140px;
+    margin-top: 5%;
+    padding: 10px;
+}
+
+
+
+#section-2{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    align-items: center;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+#section-2 h2{
+    font-size: 40px;
+    margin-bottom: 20px;  
+}
+
+
+
+#section-2 li{
+    padding-bottom: 10px;
+    font-weight: 400;
+}
+
+#section-3{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 80px;
+    align-items: center;
+}
+
+#section-3 h2{
+    font-weight: bold;
+    font-size: 40px;
+}
+
+
+#contact-form{
+    display: flex;
+    justify-content: space-around;
+    background-color: #F9E0AE;
+    margin-bottom: 100px;
+    height: 100px;
+    align-items: center;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+#contact-form input{
+    padding: 20px;
+}
+
+#contact-form ::placeholder{
+    text-align: center;
+    color: #696969;
+}
+
+.submit {
+    background-color: #C24914;
+    border: 1px #C24914 solid;
+    color: #fff;
+    font-weight: bold;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#section-4{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 100px;
+}
+
+#section-4 h2{
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#section-4 p{
+    color: #696969;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+#section-4 img{
+    height: 500px;
+}
+
+.comm-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#section-4 button{
+    background-color: #FC8621;
+    border: 1px #FC8621 solid;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+#main-footer{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+    padding-top: 60px;
+    padding-left: 160px;
+    padding-right: 160px;
+}
+
+#main-footer h1{
+    font-family: cursive;
+}
+
+.footer {
+    background-color: #F9E0AE;
+}
+
+.last-text{
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+#socials{
+    list-style: none;
+    padding: 0;
+}
+
+#socials li{
+    display: inline;
+    padding-right: 10px;
+}
+
+#links{
+    padding-left: 5px;
+}
+
+#links li{
+    padding-bottom: 10px;
+}
+
+#contacts{
+    padding: 0;
+    list-style: none;
+}
+
+#contacts li{
+    margin-bottom: 10px;
+}
+
+.title{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-imgCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.label-toggle {
+    display: none;
+    visibility: hidden;
+}
+
+/* .start-learning-button {
+    margin: auto
+} */
+
+/* MOBILE VERSION */
+
+@media only screen and (max-width:600px) {
+
+    .container{
+        width: fit-content;
+    }
+
+    #main-header{
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #main-header h1{
+        font-size: 60px;
+    }
+    .menu{
+        display: none;
+    }
+
+    .label-toggle{
+        align-content: center;
+        display: flex;
+        visibility: visible;
+    }
+
+    #contact-button{
+        
+        display: none;
+       
+    }
+
+    #main-header h1{
+        font-family: cursive;
+        font-size: 30px;
+    }
+
+    .imgCard{
+        display: flex;
+        size: 5px
+    }
+
+    #navbar li{
+        display: none;
+        visibility: hidden;
+    }
+
+    .slide{
+        height: 100%;
+        width: 180px;
+        background-color: #F9E0AE;
+        transition: 0.5s ease;
+        transform: translateX(-290px);
+    }
+
+    .slide ul{
+        padding-top: 120px;
+    }
+
+    .slide ul li{
+        list-style: none;
+    }
+
+    .slide ul li a{
+        text-decoration: none;
+        transition: 0.2s ease-out;
+        color: #011a41;
+    }
+
+    .slide i{
+        width: 25px;
+    }
+
+    .my-checkbox{
+        display: none;
+        visibility: hidden;
+    }
+
+    .toggle{
+        display: flex;
+        top: 90px;
+        justify-content: center;
+    }
+
+    #section-1{
+        padding-top: 60px;
+        margin: 0;
+        padding-left: 40px;
+        padding-right: 40px;
+        flex-direction: column;
+    }
+
+    #section-1 img{
+        width: 400px;
+    }
+
+    #section-1 h2{
+        font-size: 45px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #section-1 p{
+        text-align: center;
+    }
+
+    .start-learning-button {
+        margin: auto;
+    }
+
+    #section-1 button{
+        display: block;
+        padding: 20px 30px;
+    }
+
+    #section-2{
+        flex-direction: column-reverse;
+        margin: 0;
+        padding: 0;
+    }
+
+    #section-2 ul{
+        margin-bottom: 20px;
+    }
+
+    #section-3{
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    #section-3 h2{
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 30px;
+    }
+
+    #contact-form{
+        display: none;
+        visibility: hidden;
+    }
+
+    #section-4{
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    #section-4 img{
+        display: none;
+        visibility: hidden;
+    }
+
+    #main-footer{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-top: 50px;
+    }
+
+    .title{
+        text-align: center;
+    }
+
+    .contact-section{
+        margin-bottom: 20px;
+    }
+
+    .links-section{
+        margin-bottom: 20px;
+    }
+
+    .socials-section{
+        margin-bottom: 20px;
+    }
+    
+}
+
+/* IPAD VERSION */
+@media screen and (min-width:700px) and (max-width:1024px) {
+    .container{
+        width: fit-content;
+    }
+
+    /* #section-1 button{
+        display: flex;
+        align-items: center;
+        margin-left: 120px;
+    } */
+
+    #section-4 img{
+        height: 500px;
+    }
+    
+}
+
+/* IPHONE SE VERSION */
+
+@media only screen and (min-width: 320px) {
+    .container{
+        width: min-content;
+    }
+
+    #section-1{
+        margin-bottom: 120px;
+    }
+    
+}
+
+/* IPAD PRO */
+
+@media only screen and (min-width: 1024px){
+    .container{
+        width: max-content;
+    }
+}
+
+/* GALAXY FOLD */
+@media only screen and (min-width: 280px) {
+    .container{
+        width: fit-content;
+    }
+}
+
+
+/* ASUS ZENBOOK FOLD */
+@media only screen and (min-width: 1280px) {
+    .container{
+        width: fit-content;
+    }
+}
+
